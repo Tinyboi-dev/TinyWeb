@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Results - TinyWeb</title></head>
+<body>
+  <h1>Results for "{{ query }}"</h1>
+  <ul>
+    {% for doc, score in results %}
+      <li>{{ doc }} (Score: {{ "%.2f"|format(score) }})</li>
+    {% endfor %}
+  </ul>
+  <a href="/">Back to Search</a>
+</body>
+</html>
